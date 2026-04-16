@@ -15,22 +15,22 @@ This repo is a complete AI toolkit for education. Every skill is a standalone pr
 |-------|-------------|------------|
 | Assessment Question Writer | Generate a balanced, standards-aligned set of assessment items — multiple choice, short answer, constructed response, performance task — with answer keys, scoring guidance, and misconception-tagged distractors. | ~30 min/assessment |
 | Curriculum Standards Aligner | Map existing lesson plans, units, or course outlines to official curriculum standards (Common Core, NGSS, state-specific frameworks, IB, AP, etc.) and identify alignment gaps, redundancies, and sequencing improvements. | ~45 min/unit |
-| Differentiation Planner | Suggest modifications for struggling, on-level, and advanced learners for a given lesson. | ~15 min/plan |
+| Differentiation Planner | Turn a lesson plan or learning objective into a concrete, teacher-usable differentiation plan grounded in UDL, MTSS/RTI tiering, and Carol Ann Tomlinson's content/process/product/learning-environment/affect framework. | ~25 min/lesson |
 | Exit Ticket Generator | Produce a short, objective-aligned exit ticket (typically 3–5 items) that surfaces whether students actually met the lesson's learning target in the final few minutes of class. | ~12 min/lesson |
 | Lesson Plan Builder | Produce a fully-structured, teach-ready lesson plan from a topic and learning objective — with standards alignment, time-stamped activity sequence, built-in differentiation and formative checks, and a materials list. | ~30 min/lesson |
 | Rubric Generator | Produce a classroom-ready rubric — analytic or holistic, single-point or multi-level — with observable criteria, calibrated performance descriptors, and standards alignment. | ~20 min/rubric |
 | Student Feedback Generator | Produce personalized, formative feedback on student work that highlights specific strengths, identifies areas for growth, and provides actionable next steps — all calibrated to the student's level and the assignment rubric. | ~15 min/student |
 | Text Level Adjuster | Rewrite a passage of text up or down to a target reading level — specified as a Lexile band, grade band, or ELL proficiency tier — while preserving every factual claim, key concept, and central argument from the source. | ~45 min/passage |
 | Classroom Newsletter Generator | Turn a teacher's quick bullet-point notes into a polished, family-friendly weekly or monthly classroom newsletter. | ~30 min/newsletter |
-| Parent Communication Drafter | Write professional, empathetic emails for progress updates, concerns, and event announcements. | ~10 min/email |
+| Parent Communication Drafter | Draft a short, parent/guardian-facing message for one of the five recurring communication types a classroom teacher or specialist sends during a typical week: (1) progress update, (2) behavioral or academic concern, (3) event/logistics announcement, (4) absence, tardy, or missing-work follow-up, and (5) positive recognition / "good news" note. | ~12 min/message |
 | Behavior Intervention Plan Drafter | Draft a structured behavior intervention plan (BIP) or positive behavior support plan from a teacher's description of a target behavior, suspected function, and classroom context. | ~90 min/plan |
-| IEP Goal Progress Tracker | Summarize student progress data into narrative updates for IEP goal reporting. | ~15 min/student |
+| IEP Goal Progress Tracker | Convert raw progress-monitoring data (work samples, curriculum-based measures, teacher observation logs, assistive tech usage, behavior frequency counts) into a legally-defensible narrative progress report for an annual, quarterly, or mid-year IEP review. | ~25 min/student |
 | Student Progress Report Writer | Transform raw student performance data (grades, attendance, assignment completion, behavioral notes) into polished narrative progress reports suitable for report cards, parent-teacher conferences, or administrative reviews. | ~20 min/report |
 | Email Drafter | Turn rough notes into a professional, ready-to-send email tailored to common education scenarios — parent updates, colleague coordination, administrator correspondence, vendor communication, or student outreach. | ~10 min/use |
 | Meeting Summarizer | Summarize education meeting notes into structured action items, decisions, and follow-ups — formatted for the specific meeting type (IEP, PLC, parent-teacher conference, department, staff, or committee meeting). | ~10 min/use |
 | Review Responder | Craft professional, thoughtful responses to online reviews of your school, program, or educational organization — handling positive praise, constructive criticism, and negative complaints with appropriate tone and care. | ~10 min/use |
 
-**Total time saved per use: ~407+ minutes across all skills.**
+**Total time saved per use: ~429+ minutes across all skills.**
 
 ## Quick Start
 
