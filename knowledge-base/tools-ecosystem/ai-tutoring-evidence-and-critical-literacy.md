@@ -1,6 +1,6 @@
 # AI Tutoring Evidence Base, Critical AI Literacy, and 2026 District Governance Signals
 
-Snapshot as of 2026-04-27. This file complements the prior tools-ecosystem files (`ai-feedback-and-grading.md`, `curriculum-mapping-tools.md`, `formative-assessment-and-differentiation-tools.md`, `sub-plans-observation-and-plc-tools.md`, `ai-funding-policy-and-agentic-tools.md`) by capturing three threads that crystallized between 2026-04-26 and 2026-04-27: empirical RCT evidence on AI tutoring outcomes, the emerging distinction between AI literacy and critical AI literacy, and district-level governance moves and cost stories that are reshaping how superintendents are sequencing AI rollout.
+Snapshot as of 2026-04-28. This file complements the prior tools-ecosystem files (`ai-feedback-and-grading.md`, `curriculum-mapping-tools.md`, `formative-assessment-and-differentiation-tools.md`, `sub-plans-observation-and-plc-tools.md`, `ai-funding-policy-and-agentic-tools.md`) by capturing four threads that have crystallized in the 2026-04-26 → 2026-04-28 window: empirical RCT evidence on AI tutoring outcomes, the emerging distinction between AI literacy and critical AI literacy, district-level governance moves and cost stories that are reshaping how superintendents are sequencing AI rollout, and — added 2026-04-28 — the LAK26-presented finding on the in-classroom equity gap that opens up when teachers are running AI-tutoring blocks.
 
 ## AI Tutoring — RCT Evidence and What It Means for Skill Design
 
@@ -16,6 +16,30 @@ Several practitioner-relevant patterns recur across the AI-tutoring research cor
 - The cost-per-effective-tutor-hour is the single largest driver of district interest in 2026. With high-dose tutoring at ~$2,000–4,000 per student per year out of reach for most districts, the supervised-AI pattern at ~10–20% of that cost is the pragmatic on-ramp.
 
 The implication for the skills repo: AI-tutor design skills (Socratic Tutor Prompt Builder, future small-group AI-tutor protocols) sit on a strengthening evidence base, not on demo-day enthusiasm.
+
+## In-Classroom Attention Equity in AI-Tutoring Blocks — 2026-04-28 Update
+
+A study from NC State, presented at LAK26 (the Annual Learning Analytics & Knowledge Conference, Bergen, April 27 – May 1, 2026) and titled in the published proceedings as a session-by-session analysis of teacher interventions in K-12 classrooms, surfaces an equity pattern that intuition alone does not catch:
+
+- The analysis covered ~1.4M student-system interactions across 339 students in 14 middle and high school math classes across 10 U.S. schools during 2022-23, all using an intelligent tutoring system.
+- Teacher help in these classrooms is "sticky" — students who received a teacher touch in one session were significantly more likely to receive additional teacher touches in subsequent sessions, even after controlling for current engagement state.
+- The mirror finding: students who were idle or struggling but had not yet been visited tended to remain unvisited. Idle behavior alone did not draw sustained teacher attention over time.
+- The learning effects of teacher help were largely session-bound — the teacher touch helped that session's task but did not produce a measurable cross-session transfer of the same magnitude as the recurrence of attention. The gap between attention-recurrence and learning-transfer is what the authors describe as "sticky help, bounded effects."
+
+What the finding does and does not mean:
+
+- The finding is not that teachers are biased in a hostile sense; it is that human attention allocation under cognitive load defaults to the students the teacher has already built a working relationship with — the path of least friction. The AI-tutoring block is a high-cognitive-load environment for the teacher (multiple students at multiple platforms working at multiple paces), which makes the default-to-the-familiar pattern stronger.
+- The finding is also not that AI tutoring is the cause of the equity gap. Sticky-attention patterns predate AI tutoring. What the AI-tutoring environment does is make the pattern measurable at session-level granularity for the first time, because every student-system interaction is logged.
+- The fix the authors describe is real-time analytics that surface attention-coverage gaps to the teacher mid-block — a dashboard view that highlights under-visited students and prompts the teacher to redistribute attention. Most 2026 AI-tutor platforms do not yet provide this view; the dashboards are student-progress-focused rather than teacher-attention-focused.
+
+Practitioner heuristics surfacing from the finding:
+
+- The teacher's mental model of "who needs help today" is biased toward the students who have already received help. A periodic audit against the roster — not against the teacher's mental model — is the corrective. The audit can be light (a 30-second-per-session log of touches) and still produce a useful trend signal across a 10-day window.
+- Naming a fairness frame in advance (equal-time / proportional-to-need / floor-then-need) changes how the same data reads. Without a named frame, equity findings drift toward whatever the teacher's mood is on the audit day. The frame the teacher names becomes the lens; the data becomes interpretable.
+- Coverage and quality are different questions. A teacher who reaches every student with a low-cognitive-demand check-in has not done better than a teacher who reaches eight students with high-leverage transferable moves. The Teacher Attention Equity Auditor measures coverage; the Classroom Observation Feedback Generator and a coach's interaction-quality observation measure quality. The pair is the durable check.
+- Subgroup disaggregation is descriptive, not prescriptive. Surfacing that EL students or 504 students or below-benchmark students have averaged less attention in the window is a prompt to investigate the cause, not a directive to target the group with more attention decoupled from need. The teacher's professional judgment, not the audit, decides what to change.
+
+The Teacher Attention Equity Auditor skill is the repo's response — a teacher-side, prompt-driven equivalent of the dashboard view the LAK26 paper recommends, designed to run weekly or biweekly across the whole roster. Distinct from the existing PLC Agenda & Data Protocol Builder (team-level grade or department data), the IEP Goal Progress Tracker (longitudinal goal data on identified students), and the Writing Conference Prep Generator (next-conference plan for one student): the auditor is the routine in-classroom equity checkpoint that runs across the whole roster.
 
 ## AI Literacy vs. Critical AI Literacy — The 2026 Framework Convergence
 
@@ -87,19 +111,19 @@ Two 2026 patterns are converging in the teacher-professional-development space:
 
 These patterns reinforce the existing repo skills (PLC Agenda & Data Protocol Builder, Classroom Observation Feedback Generator) and surface a backlog candidate for a future cycle: a Professional Reflection Prompt Generator that produces structured reflection prompts grounded in a specific lesson video / classroom artifact / coaching-cycle stage, distinct from the more transactional post-lesson PLC reflection prompt that the AI Literacy Lesson Plan Generator already includes.
 
-## Skill-Repo Coverage Map — Post 2026-04-27
+## Skill-Repo Coverage Map — Post 2026-04-28
 
-Skills as of this cycle (27 total):
+Skills as of this cycle (28 total):
 
 - **Admin (7)** — Behavior Intervention Plan Drafter, Classroom Observation Feedback Generator, Education Grant Proposal Drafter, IEP Goal Progress Tracker, PLC Agenda & Data Protocol Builder, Restorative Conference Script Generator, Student Progress Report Writer
 - **Customer Service (3)** — Classroom Newsletter Generator, Parent Communication Drafter, Parent-Teacher Conference Prep Generator
-- **Operations (14)** — Academic Vocabulary Builder *(new)*, AI Literacy Lesson Plan Generator, Assessment Question Writer, Critical AI Inquiry Prompt Builder *(new)*, Curriculum Standards Aligner, Differentiation Planner, Exit Ticket Generator, Lesson Plan Builder, Rubric Generator, Socratic Tutor Prompt Builder, Student Feedback Generator, Substitute Lesson Plan Generator, Text Level Adjuster, Writing Conference Prep Generator *(new)*
+- **Operations (15)** — Academic Vocabulary Builder, AI Literacy Lesson Plan Generator, Assessment Question Writer, Critical AI Inquiry Prompt Builder, Curriculum Standards Aligner, Differentiation Planner, Exit Ticket Generator, Lesson Plan Builder, Rubric Generator, Socratic Tutor Prompt Builder, Student Feedback Generator, Substitute Lesson Plan Generator, Teacher Attention Equity Auditor *(new)*, Text Level Adjuster, Writing Conference Prep Generator
 - **\_shared (3)** — Email Drafter, Meeting Summarizer, Review Responder
 
 Knowledge-base ecosystem files (6):
 - ai-feedback-and-grading.md
 - ai-funding-policy-and-agentic-tools.md
-- ai-tutoring-evidence-and-critical-literacy.md *(new)*
+- ai-tutoring-evidence-and-critical-literacy.md *(updated 2026-04-28 with LAK26 attention-equity finding)*
 - curriculum-mapping-tools.md
 - formative-assessment-and-differentiation-tools.md
 - sub-plans-observation-and-plc-tools.md
@@ -112,4 +136,7 @@ Knowledge-base ecosystem files (6):
 - **Success Criteria / "I Can" Converter** (7 / 6) — objectives → student-friendly success criteria using ABCD method
 - **Feedback Comment Bank Builder** (7 / 7) — reusable skill-tagged comment libraries trained on the teacher's voice
 - **Professional Reflection Prompt Generator** (carried) — structured reflection prompts grounded in a specific lesson video / classroom artifact / coaching-cycle stage
-- Out of teacher-prompt repo scope but flagged: District AI Acceptable Use Policy Drafter (governance artifact, candidate for a SEA / LEA-policy track if one exists); Knowledge Pack / RAG Curriculum Document Builder (platform configuration, candidate for repo-side or LEA-side track); Teacher AI-Coaching Reflection Companion (district-PD artifact, candidate for the same future track)
+- **Decodable Text / Phonics-Aligned Practice Generator** (7 / 7) — newly surfaced 2026-04-28; LETRS-aligned scope-and-sequence approach; distinct from Text Level Adjuster (which adjusts existing passages by Lexile/grade band, not phonics-pattern-aligned)
+- **Math Misconception Diagnostic Summary Generator** (7 / 6) — surfaced 2026-04-28; pulls misconception clusters from class-wide quiz/exit-ticket/AI-tutor data; partial overlap with Assessment Question Writer's distractor design and Student Feedback Generator's per-student feedback
+- **Course-Level AI Use Disclosure / Syllabus Block Generator** (7 / 6) — surfaced 2026-04-28; classroom or course-level disclosure language and "traffic-light" task-by-task AI permission grid; distinct from district-level AUP drafter
+- Out of teacher-prompt repo scope but flagged: District AI Acceptable Use Policy Drafter (governance artifact, candidate for a SEA / LEA-policy track if one exists; Ohio's July 1 2026 mandate continues to add urgency); Knowledge Pack / RAG Curriculum Document Builder (platform configuration, candidate for repo-side or LEA-side track); Teacher AI-Coaching Reflection Companion (district-PD artifact, candidate for the same future track)
