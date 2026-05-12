@@ -1,6 +1,6 @@
 # AI Tutoring Evidence Base, Critical AI Literacy, and 2026 District Governance Signals
 
-Snapshot as of 2026-04-28. This file complements the prior tools-ecosystem files (`ai-feedback-and-grading.md`, `curriculum-mapping-tools.md`, `formative-assessment-and-differentiation-tools.md`, `sub-plans-observation-and-plc-tools.md`, `ai-funding-policy-and-agentic-tools.md`) by capturing four threads that have crystallized in the 2026-04-26 → 2026-04-28 window: empirical RCT evidence on AI tutoring outcomes, the emerging distinction between AI literacy and critical AI literacy, district-level governance moves and cost stories that are reshaping how superintendents are sequencing AI rollout, and — added 2026-04-28 — the LAK26-presented finding on the in-classroom equity gap that opens up when teachers are running AI-tutoring blocks.
+Snapshot as of 2026-05-11 (updated from 2026-04-28). This file complements the prior tools-ecosystem files (`ai-feedback-and-grading.md`, `curriculum-mapping-tools.md`, `formative-assessment-and-differentiation-tools.md`, `sub-plans-observation-and-plc-tools.md`, `ai-funding-policy-and-agentic-tools.md`) by capturing four threads that have crystallized in the 2026-04-26 → 2026-04-28 window: empirical RCT evidence on AI tutoring outcomes, the emerging distinction between AI literacy and critical AI literacy, district-level governance moves and cost stories that are reshaping how superintendents are sequencing AI rollout, and — added 2026-04-28 — the LAK26-presented finding on the in-classroom equity gap that opens up when teachers are running AI-tutoring blocks.
 
 ## AI Tutoring — RCT Evidence and What It Means for Skill Design
 
@@ -140,3 +140,62 @@ Knowledge-base ecosystem files (6):
 - **Math Misconception Diagnostic Summary Generator** (7 / 6) — surfaced 2026-04-28; pulls misconception clusters from class-wide quiz/exit-ticket/AI-tutor data; partial overlap with Assessment Question Writer's distractor design and Student Feedback Generator's per-student feedback
 - **Course-Level AI Use Disclosure / Syllabus Block Generator** (7 / 6) — surfaced 2026-04-28; classroom or course-level disclosure language and "traffic-light" task-by-task AI permission grid; distinct from district-level AUP drafter
 - Out of teacher-prompt repo scope but flagged: District AI Acceptable Use Policy Drafter (governance artifact, candidate for a SEA / LEA-policy track if one exists; Ohio's July 1 2026 mandate continues to add urgency); Knowledge Pack / RAG Curriculum Document Builder (platform configuration, candidate for repo-side or LEA-side track); Teacher AI-Coaching Reflection Companion (district-PD artifact, candidate for the same future track)
+
+---
+
+## OECD "Performance Without Learning" Signal + Agentic AI Course Completion + Google AI Educator Series — 2026-05-11 Update
+
+### The OECD "Performance Without Learning" Finding (2026-01)
+
+The OECD Digital Education Outlook 2026 (published January 2026; conference held May 2026) presents what is now the most-cited global policy finding on generative AI in education: GenAI can dramatically improve student performance on assessed tasks while simultaneously undermining the learning those tasks were designed to produce. The performance advantage tends to disappear — or even reverse — when AI access is removed, as in in-class exams.
+
+The core OECD distinction is between two outcomes that 2024–2025 discourse frequently conflated:
+
+- **Performance** — the quality of the assessed product the student submits; easily improved by AI assistance
+- **Learning** — the durable cognitive change in the student; not reliably improved by AI-assisted performance, and potentially harmed if the AI is doing the cognitive work the learning target was designed to require
+
+The OECD's policy-side conclusion is that AI supports learning when it is deployed with clear pedagogical purpose and design — and degrades it when it is used to outsource the cognitive work that constitutes the learning target. The implication is not that AI should be banned from classrooms; it is that assessment design must assume AI access and still require genuine student cognition.
+
+OECD also reports that in 2024, 37% of lower secondary teachers globally reported using AI in their work (TALIS survey), and 72% expressed concerns about academic integrity — confirming that the design gap between performance and learning is already a lived practitioner concern, not only a research abstraction.
+
+**Practitioner heuristic:** the OECD finding provides the research grounding for the AI-Present Assessment Redesigner skill (2026-05-11). The skill operationalizes the design question: "given that AI can improve the submitted product, how do we redesign the assignment so that the cognitive work constituting the learning target remains genuinely required of the student?" The audit, strategy menu, and rubric-criteria update steps in the skill respond directly to the OECD's pedagogical-purpose-and-design condition.
+
+**CAQA parallel:** A related industry-education finding (CAQA Compliance, citing the OECD report) frames the same risk in vocational education terms: students who use AI to complete assessments are "performing without learning" — passing the assessment without building the competency. The signal travels across K-12, higher education, and vocational contexts.
+
+### Agentic AI Course Completion — The "Einstein" Case (2026-02)
+
+In February 2026, a 22-year-old developer (Advait Paliwal) launched a tool called Einstein capable of autonomously logging into Canvas, watching recorded lectures, completing assignments, and submitting homework — without the student engaging. Inside Higher Ed coverage (February 26, 2026) framed the question directly: agentic AI can complete whole courses — now what?
+
+The Einstein case represents the logical extreme of the performance-without-learning dynamic: the performance (course completion) fully decoupled from the learning. The tool faced legal challenges, but its release accelerated faculty and institutional policy conversations about which course designs are most vulnerable to agentic completion and which are more durable.
+
+Inside Higher Ed's coverage identified the most vulnerable assignment types: asynchronous quizzes, discussion board posts graded on participation (word count or submission presence, not content), take-home essays on generic topics, and problem sets with answer-key-recoverable solutions. The most agentic-completion-resistant designs share features that closely track the AI-Present Assessment Redesigner skill's strategy menu: process documentation, personal-context anchoring, in-class components, oral defense, and multi-stage feedback-response cycles.
+
+**Practitioner heuristic:** the Einstein case is not primarily an academic integrity enforcement problem; it is an assessment design problem. Courses designed primarily around content-delivery-and-recall assessments are structurally vulnerable to agentic completion regardless of policy. The durable response is to redesign the assessment's center of gravity toward disciplinary judgment, personal context, and iterative human-feedback-response — work that agentic tools can approximate but cannot genuinely perform.
+
+### Google AI Educator Series (Launch: 2026-05-13)
+
+Google launched a free, comprehensive AI training program for all 6 million K-12 and higher-education educators in the US, in partnership with ISTE+ASCD. Key features:
+
+- **Format:** short, non-sequential micro-trainings (K-12 sessions: 10–15 minutes; higher-ed: 30–45 minutes), broken into three tracks: Foundational Understanding, Pedagogical Applications, and Administrative Applications
+- **Grade-level specificity:** K-12 Pedagogical Applications sessions are grade-level specific
+- **Micro-credentials:** teachers earn badges on completion, suitable for PD documentation
+- **Job-embedded design:** specifically structured to be completed during contracted hours (prep periods, lunch)
+- **Recurring content:** starting September 2, 2026, new content released the first Wednesday of each month
+- **Tools covered:** Gemini and NotebookLM integration with Google Classroom; AI-in-LMS workflows
+- **New K-12 integration:** Gemini LTI support for Moodle (launching May 2026) brings Gemini and NotebookLM directly into Moodle's LMS environment alongside the existing Google Classroom integration
+
+**Practitioner heuristic:** the Google AI Educator Series is the largest single US educator AI-training event of 2026-Q2, reaching the universe of educators who use Google Workspace for Education. The training's emphasis on pedagogical applications (not just technical how-to) aligns with the OECD finding's policy-side recommendation: AI supports learning when guided by clear teaching principles. Districts looking to fulfill ED Supplemental Priority AI-literacy professional development requirements should consider the Google AI Educator Series as a no-cost option. The AI Literacy Lesson Plan Generator skill in this repo can scaffold the discussion of these sessions during staff meetings or PD debriefs.
+
+### Skill-Repo Coverage Map (post-2026-05-11 additions)
+
+| 2026 Force | Repo Skill(s) That Respond |
+|---|---|
+| OECD "performance without learning" — assessment design response | **AI-Present Assessment Redesigner (NEW)**, Critical AI Inquiry Prompt Builder, AI Literacy Lesson Plan Generator |
+| Agentic AI course completion (Einstein / Canvas) — assessment design response | **AI-Present Assessment Redesigner (NEW)** |
+| End-of-year reporting cycle — comment bank efficiency | **Feedback Comment Bank Builder (NEW)**, Student Feedback Generator, Student Progress Report Writer |
+| Google AI Educator Series (May 13, 2026) — PD scaffolding | AI Literacy Lesson Plan Generator |
+| Gemini in Moodle / Google Classroom AI integration | AI Literacy Lesson Plan Generator (platform-calibration list updated) |
+
+### Sources Behind the 2026-05-11 Update
+
+OECD Digital Education Outlook 2026 (January 2026 publication; OECD conference May 2026; CAQA, EPALE, Digital Skills and Jobs Platform, CIDDL, and youthrex summaries); Inside Higher Ed "Agentic AI Can Complete Whole Courses. Now What?" (February 26, 2026; also covered by UPCEA, 8allocate, ScholarsJournal, edCircuit, IEEE Xplore Agentic AI in Education State of the Art, AIR Institutional Research); eSchoolNews / eCampusNews "The AI-resistant classroom is a myth: Designing assessments that assume AI is present" (March 2026); UMass Amherst CTL "How Do I Redesign Assignments and Assessments in an AI-Impacted World?"; monsha.ai "7 Strategies to AI-proof Assessment Design" and "30 Ideas and Examples for AI-resilient Assessments"; Digital Learning Institute "AI for Learning in 2026: Tools, Workflows, and Assessment"; Educators Technology "AI-Resistant Assessments: Practical Tips and Strategies for Teachers" (February 2026); Google blog "Google launches AI literacy training for 6 million US educators" and "From test prep to graduation, our latest AI tools support learners"; GovTech "Google, ISTE+ASCD Offer AI Training to All Teachers"; ISTE+ASCD announcement; Google Gemini in Moodle LTI announcement (May 2026); MagicSchool blog "AI Teaching Tools For Planning, Assessment & Feedback Updates 2026" (Knowledge feature: RAG over district-uploaded curriculum docs up to 50MB, Org Admin Enterprise accounts); Educators Technology MagicSchool AI Review (February 2026); Brisk Teaching 500k+ educator adoption data; Khanmigo NBER study early 2026 (34% greater learning gains vs. traditional tutoring); MagicSchool 5M+ educator platform data (80+ teacher-specific workflows; Knowledge feature grounding AI responses in district curriculum documents). All references are factual attributions; no verbatim text was copied into this knowledge-base file.

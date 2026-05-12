@@ -4,8 +4,8 @@ category: operations
 tools: [claude, chatgpt]
 difficulty: intermediate
 time_saved: "~60 min/course-set, ~3-5 hr/year of mid-task disclosure rework"
-version: 1.0
-last_eval_score: null
+version: 2.0
+last_eval_score: 9.4
 ---
 
 # 🚦 Course-Level AI Use Disclosure / Syllabus Block Generator
@@ -18,20 +18,33 @@ Produce a single, coherent course-level (or classroom-level) AI use disclosure p
 
 Use at the start of a new course, semester, term, or unit when the teacher needs to commit to a coherent AI-use stance the class can plan around. Also use after a district AUP update, a state-mandate effective date (Ohio July 1, 2026 model-policy adoption; Maryland or NJ literacy-mandate compliance window; Idaho SB 1227 framework rollout), or a school-board policy ratification when the prior syllabus AI block is no longer accurate. Also use before a parent-teacher conference cycle so the disclosure shows up before the question shows up. Also use after an AI-related academic-integrity dispute, parent complaint, or student-confusion pattern that suggests the prior block was too vague — the rewrite is downstream evidence the teacher took the feedback seriously and made the rules more workable. Also use when adopting a new AI tool in the course (Khanmigo, MagicSchool Student, SchoolAI Spaces, ChatGPT Edu, Claude for Education, Copilot Studio for Education, Gemini Gems, Brisk Teaching, Project Read, LitLab, Diffit, Snorkl, Eduaide) so the permission grid reflects the actual tool roster. Do NOT use as a district-level AUP (governance artifact, out of repo scope; flag the request to the SEA/LEA-policy track if it surfaces). Do NOT use as a per-lesson plan (use AI Literacy Lesson Plan Generator). Do NOT use as a per-assignment inquiry prompt set (use Critical AI Inquiry Prompt Builder). Do NOT use as a parent communication on a single AI-related concern (use Parent Communication Drafter v3.0).
 
+## Quick-Start Mode
+
+**If you are mid-semester and need only a permission grid update** (not a full syllabus rewrite), you can run this skill with just three inputs: (1) the course name and grade band, (2) the list of new or changed assignments and their postures, and (3) the approved tool roster update. The skill will produce a delta permission grid and a revised per-unit refresh block only, leaving the existing syllabus AI block unchanged. For a full syllabus block, provide all Required Input below.
+
 ## Required Input
 
-Provide the following:
+**Fields auto-loaded from `config.yml` (provide only if your config is incomplete or out of date):**
+
+- **District AUP version and link** — loaded from `config.yml` → `district_aup_version` and `district_aup_url`
+- **District AI coordinator name and contact** — loaded from `config.yml` → `district_ai_coordinator`
+- **School-board ratified policy date** — loaded from `config.yml` → `board_ai_policy_date`
+- **State-mandate posture** — loaded from `config.yml` → `state_ai_mandate`
+- **District-approved AI tool roster (baseline)** — loaded from `config.yml` → `approved_ai_tools`
+- **District-required syllabus-statement language** — loaded from `config.yml` → `district_syllabus_ai_block`
+- **District translation service and home languages above threshold** — loaded from `config.yml` → `translation_service` and `home_languages`
+- **Student PII floor (default: standard FERPA/COPPA floor)** — loaded from `config.yml` → `pii_floor`; override only if your district has a stricter policy
+
+**Fields the teacher provides:**
 
 1. **Course context** — course name, grade band (K–2, 3–5, 6–8, 9–12, postsecondary), content area (ELA, math, science, social studies, world language, CTE, specials, self-contained elementary, multi-subject elementary, AP / IB / dual-enrollment, postsecondary), term length (semester / trimester / quarter / year / summer), class period structure, and whether the course is in-person / hybrid / fully online. The traffic-light line for an AP Lang research paper differs from the one for a 3rd-grade math fluency block.
-2. **District AUP and state-mandate context** — district AUP version and link, district AI coordinator or designee for escalations, state-mandate language the syllabus must mirror (Ohio model AI policy elements, NJ / MD / GA AI-literacy-mandate language, Idaho SB 1227 framework references, NYC red-yellow-green model, district custom traffic-light variant), and any school-board ratified policy date the syllabus must cite. When the district AUP and the state mandate disagree, the skill flags the conflict rather than papering over it.
-3. **Approved AI tool roster for the course** — list every AI tool the teacher has approved for student use in this course (district-licensed Khanmigo / MagicSchool Student / SchoolAI Spaces / Eedi / ALEKS / IXL / Lexia / i-Ready / Imagine Learning / Carnegie Learning / Socratic Mind; district-licensed general models — ChatGPT Edu, Claude for Education, Copilot Studio for Education, Gemini Gems; teacher-authored custom GPTs / Claude Skills / SchoolAI Spaces; teacher-only-use tools like Brisk Teaching, Diffit, Project Read, LitLab, Snorkl, Eduaide, MagicSchool Teacher tools). Mark each tool as student-allowed, teacher-only, or under-review. The skill refuses to produce green-light language for tools that are not on the district-approved list.
-4. **Major assignments and assessments in the course** — list 6–15 major assignment types (e.g., literary-analysis essay, research paper, lab report, problem-set series, design project, oral presentation, debate, portfolio, in-class assessment, common assessment, end-of-course exam, capstone). For each, the skill builds a row in the permission grid; assignments not listed default to the syllabus-level posture and are flagged as needing per-task adjustment.
-5. **AI-use posture for each major assignment** — the teacher names one of: AI-prohibited (Red — closed-book / proctored / honor-code-only) / AI-for-brainstorming-only (Yellow — idea generation, outline scaffolding, never drafted text) / AI-for-feedback-only (Yellow — line-edit, revision suggestion, never drafted text) / AI-for-explanation-only (Yellow — concept clarification, worked-example walk-through, never homework completion) / AI-for-drafting-with-attribution (Green — drafting permitted with required disclosure and citation) / AI-as-object-of-analysis (Green — the AI output is the artifact under study). When the posture is unspecified, the skill prompts the teacher to choose rather than guessing.
-6. **Attribution and disclosure standard the course will adopt** — one of: Tool-and-Date (cite tool name and access date) / Tool-Date-Prompt (add the prompt verbatim) / Tool-Date-Prompt-Edits (add a one-paragraph "what I changed" reflection) / Full-Transparency (tool, date, prompt, every output the student kept, every edit the student made, plus the reflection). The standard escalates with the assignment's stakes; the skill maps each major assignment to a standard, flags inconsistencies, and writes a one-page Student Disclosure Sheet template the class can use across assignments.
-7. **Verification-against-non-AI-source expectation** — the teacher names whether the course expects every AI-touched submission to include a verify-the-AI step (a textbook page, a primary source, a peer-reviewed article, a teacher-curated reading, an SME quote, a hand-calculation, a lab observation). The skill writes the expectation into the permission grid, the disclosure sheet, and the rubric language, so the verification habit is enforceable not aspirational.
-8. **Subgroup considerations** — EL students (translated syllabus block, sentence-frame disclosure-sheet template, home-language summary line at 6th-grade reading level), students with IEP/504 (response-mode flexibility on the disclosure sheet, AT-tool / screen-reader-tool / dictation-tool note that distinguishes assistive technology from generative AI in the disclosure rules), students without home internet or home AI access (no green-light task can require home AI access; alternatives are named in the permission grid), students with cultural / family / religious / privacy concerns about AI use (an opt-out path that does not penalize the student academically).
-9. **Privacy floor** — student PII rules (no full name, no DOB, no address, no IEP/504 data, no health data, no immigration status, no disciplinary record, no sibling or family information into any chatbot, including district-licensed tools, unless the tool's data-processing agreement explicitly permits it for the listed use); the skill writes the floor into the disclosure block and refuses to produce green-light language that would require students to put PII into any tool.
-10. **Voice and length preferences** — student-facing register (warm, plain, specific; not legalistic; not threatening), parent-facing register (calm, plain, predictable; explains the why before the rule), syllabus-block length (short ~150 words / medium ~300 words / long ~500 words for the LMS landing page), permission-grid format (table / list / per-unit), and language(s) the disclosure should be available in (English plus any home languages above the threshold for translated district communications).
+2. **Approved AI tool roster for *this course*** — any tools you have approved for student use in this specific course beyond the district baseline (teacher-authored custom GPTs / Claude Skills / SchoolAI Spaces; any tool-specific nuances for this course). Mark each tool as student-allowed, teacher-only, or under-review. The skill refuses to produce green-light language for tools that are not on the district-approved roster.
+3. **Major assignments and assessments in the course** — list 6–15 major assignment types (e.g., literary-analysis essay, research paper, lab report, problem-set series, design project, oral presentation, debate, portfolio, in-class assessment, common assessment, end-of-course exam, capstone). For each, the skill builds a row in the permission grid; assignments not listed default to the syllabus-level posture and are flagged as needing per-task adjustment.
+4. **AI-use posture for each major assignment** — the teacher names one of: AI-prohibited (Red — closed-book / proctored / honor-code-only) / AI-for-brainstorming-only (Yellow — idea generation, outline scaffolding, never drafted text) / AI-for-feedback-only (Yellow — line-edit, revision suggestion, never drafted text) / AI-for-explanation-only (Yellow — concept clarification, worked-example walk-through, never homework completion) / AI-for-drafting-with-attribution (Green — drafting permitted with required disclosure and citation) / AI-as-object-of-analysis (Green — the AI output is the artifact under study). When the posture is unspecified, the skill prompts the teacher to choose rather than guessing.
+5. **Attribution and disclosure standard the course will adopt** — one of: Tool-and-Date (cite tool name and access date) / Tool-Date-Prompt (add the prompt verbatim) / Tool-Date-Prompt-Edits (add a one-paragraph "what I changed" reflection) / Full-Transparency (tool, date, prompt, every output the student kept, every edit the student made, plus the reflection). The standard escalates with the assignment's stakes; the skill maps each major assignment to a standard, flags inconsistencies, and writes a one-page Student Disclosure Sheet template the class can use across assignments.
+6. **Voice and length preferences** — student-facing register (warm, plain, specific; not legalistic; not threatening), parent-facing register (calm, plain, predictable; explains the why before the rule), syllabus-block length (short ~150 words / medium ~300 words / long ~500 words for the LMS landing page), permission-grid format (table / list / per-unit), and language(s) the disclosure should be available in (English plus any home languages above the threshold for translated district communications).
+
+*(Fields formerly listed as items 7–10 — verification-against-non-AI-source expectation, subgroup considerations, privacy floor, and district mandate cross-references — are auto-loaded from `config.yml` by default. The skill flags any gap in your config file and asks ONCE before proceeding.)*
 
 ## Instructions
 
@@ -93,4 +106,77 @@ You are a curriculum-and-policy-aware classroom teacher with deep familiarity wi
 
 ## Example Output
 
-> [This section will be populated by the eval system with a reference example. For now, run the skill with sample input to see output quality.]
+> **Context:** 9th-grade ELA, semester course (fall). District AUP loaded from config (NYC-aligned red-yellow-green model; board-adopted 2026-03-15). District AI coordinator: Ms. Yolanda Rivera, yrivera@[district].k12. State: New York (NYC model policy, June 2026 comprehensive playbook). Approved tools for this course: Claude for Education (district-licensed, student-allowed), Khan Academy (Khanmigo, student-allowed). Teacher-supplied assignments: argumentative essay (2), research paper (1), in-class Socratic seminar (3), common assessment (2), independent reading project (1), grammar and mechanics in-class quiz (2).
+
+---
+
+**Header Block**
+
+> Course: 9th-Grade ELA (Honors) | Grade Band: 9–12 | Content Area: ELA
+> Term: Fall Semester 2026–27 | Period structure: 5-day, 50-min periods
+> AUP Version: [District] AI Acceptable Use Policy, adopted 2026-03-15
+> State mandate: NYC traffic-light model (June 2026 comprehensive playbook)
+> District AI Coordinator: Ms. Yolanda Rivera | yrivera@[district].k12 | ext. 4412
+> Teacher: [Name] | [email] | Drafted: 2026-08-22 | Version: 1.0
+
+---
+
+**Syllabus AI Block — Medium Length (~300 words)**
+
+**The Why**
+
+In this course you will read, write, and argue about literature, language, and ideas. AI tools can speed up some parts of that work — finding a synonym, checking a citation format, getting quick feedback on a draft. They can also replace other parts, and when they replace the parts that are supposed to develop your thinking, you walk out of the course having learned less than you put in. The rules below tell you which is which, so you can use AI well and still get what this course is supposed to give you.
+
+**The What**
+
+This course uses the district's red-yellow-green model:
+
+- 🔴 **Red** — AI is not permitted. In-class assessments, Socratic seminars, and common assessments are Red. These are moments when I need to see *your* thinking in real time.
+- 🟡 **Yellow** — AI is permitted for specific, named uses only (brainstorming, outlining, feedback on a draft you wrote). The permission grid below names the exact use for each assignment. You must disclose any Yellow-light AI use on your Disclosure Sheet.
+- 🟢 **Green** — AI is permitted with full disclosure and attribution. Only one assignment in this course is Green (see grid). The Disclosure Sheet is required.
+
+The permission grid below shows each major assignment, its light, what you may use AI for, which tools are approved, and the verification step.
+
+**The How**
+
+For any AI use: complete the Student Disclosure Sheet (one per submission; template below). The attribution standard for this course is **Tool-Date-Prompt-Edits** — you name the tool, the date you used it, the prompt verbatim, and what you kept and changed. For all AI-touched work, you must verify at least one key claim against a non-AI source (textbook page, primary source, or teacher-curated reading). The district academic-integrity contact is [name], [email]. Detector scores alone are not evidence of a policy violation — any concern starts with a conversation.
+
+---
+
+**Permission Grid (abbreviated — 8 of 12 assignment rows shown)**
+
+| Assignment | 🚦 | Permitted AI Use | Approved Tools | Attribution Standard | Verification Source | Opt-Out Alternative |
+|---|---|---|---|---|---|---|
+| Argumentative Essay (take-home) | 🟡 | Brainstorm claim, generate counterargument list, get line-edit feedback on draft *you* wrote | Claude for Education | Tool-Date-Prompt-Edits | One primary or secondary source cited in the essay | Approved; alternative: write with no AI and note "No AI used" on sheet |
+| Research Paper | 🟡 | Summarize source abstracts to help with source selection only; no AI drafting | Claude for Education | Tool-Date-Prompt | Minimum 3 non-AI sources cited | Approved; no-AI option earns standard credit |
+| Socratic Seminar (in-class) | 🔴 | None — live discussion | None | N/A | N/A | N/A |
+| In-Class Common Assessment | 🔴 | None — closed-book, supervised | None | N/A | N/A | N/A |
+| Independent Reading Project | 🟢 | Drafting permitted with full disclosure; AI output is a scaffold, not the final product; must include metacognitive reflection | Claude for Education, Khanmigo | Full-Transparency | At least one textual quote from the independent reading text | Approved; no-AI option earns same credit if disclosure sheet notes "No AI used" |
+| Grammar & Mechanics Quiz (in-class) | 🔴 | None | None | N/A | N/A | N/A |
+| Vocabulary Practice (ongoing) | 🟡 | AI for explanation and example only; no AI-generated answers submitted | Khanmigo | Tool-and-Date | N/A | Approved |
+| *Default — all other assignments* | 🟡 | Brainstorm and outline only | Claude for Education | Tool-Date-Prompt | Named in assignment instructions | Per-assignment adjustment flagged |
+
+---
+
+**Student Disclosure Sheet (paste-ready)**
+
+> **AI Use Disclosure — [Your Name] — [Assignment Name] — [Date]**
+> Tool(s) used: ___
+> Date(s) of use: ___
+> Prompt(s) (verbatim or summarized per course standard): ___
+> What the AI produced: ___
+> What I kept: ___ | What I changed: ___
+> Verification source (non-AI): ___
+> *If no AI tools were used: "No AI tools were used on this assignment."*
+
+---
+
+**Conflict-Flag Block**
+
+> ⚠️ **No conflicts detected** between the district AUP (adopted 2026-03-15) and the NYC traffic-light model (June 2026 playbook) for this course configuration. If the district AUP is updated before the end of the semester, re-run the per-unit refresh prompt (see below) to surface any new conflicts. Contact Ms. Yolanda Rivera (yrivera@[district].k12) for any AUP interpretation questions.
+
+> *(If a conflict had been detected, the block would read: "⚠️ Conflict detected: The district AUP [section X] requires [Y] but the NYC model policy requires [Z]. The conservative posture ([more restrictive rule]) is applied here as the default. Contact Ms. Rivera before publishing this syllabus block.")*
+
+---
+
+*Full output also includes: one-page Parent/Family Summary (plain language, translation note for home languages above threshold), per-unit refresh prompt (5-question diagnostic), rubric criterion for each Green/Yellow assignment, parent-teacher conference talking point, "If You Have a Question" escalation block, IEP/504 AI carve-out paragraph, and subgroup-support block — omitted here for length.*
