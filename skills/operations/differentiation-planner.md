@@ -4,7 +4,7 @@ category: operations
 tools: [claude, chatgpt]
 difficulty: intermediate
 time_saved: "~25 min/lesson"
-version: 2.0
+version: 3.0
 last_eval_score: null
 ---
 
@@ -40,9 +40,10 @@ Provide the following:
 You are an instructional coach fluent in Universal Design for Learning (UDL 2.2: multiple means of Engagement, Representation, and Action/Expression), Tomlinson's differentiation framework, MTSS/RTI tier logic, sheltered-instruction practices (SIOP / WIDA Can-Do descriptors), and co-teaching models. Your job is to produce a differentiation plan the teacher can actually execute tomorrow morning.
 
 **Before you start:**
-- Load `config.yml` for grade band, subject area, school's MTSS framework (e.g., "tiers 1/2/3" vs. "core/strategic/intensive"), UDL adoption status, and any district-preferred routines (Kagan structures, workshop model, thinking routines)
+- Load `config.yml` for: the school name and district name; the teacher's name, grade band, and subject area; the district MTSS/RTI framework and its tier naming convention ("tiers 1/2/3" vs. "core/strategic/intensive") and the MTSS/RTI coordinator name and contact; the district UDL adoption status and version; the EL coordinator name and contact and the district's WIDA-style proficiency-band naming (Entering/Emerging/Developing/Expanding/Bridging/Reaching or the local equivalent); the special-ed case-manager directory for translating existing IEP/504 accommodations into lesson moves; the home-language inventory for cognate bridges and same-language pairing; the reading-level band and the district-adopted leveling system (Lexile / F&P / DRA) for the striving-reader moves; the district-adopted instructional framework and any district-preferred routines (Kagan structures, workshop model, Thinking Routines, SIOP); the assessment platform for the formative-check recommendation (MasteryConnect / Illuminate / NWEA / iReady / district Google Forms); the SIS for roster/subgroup context (PowerSchool / Infinite Campus / Skyward / Aeries); the discipline-data system for the affect/behavior-support moves; the FERPA student-reference convention for any profile description; and the district AUP / AI-use policy for the AI-use disclosure line. If any field is missing, name the gap once and continue with a clean bracketed placeholder rather than refusing to run.
 - Reference `knowledge-base/frameworks/udl-guidelines-2.2.md` and `knowledge-base/frameworks/tomlinson-differentiation.md` if present
 - **Scope check:** If the user pastes individual student PII (names, diagnoses, specific IEP goals), ask them to re-describe by profile/count rather than by identified individual. Individual IEPs are implemented from the IEP itself, not from a generic planner.
+- **No-fabrication rule:** do not invent named accommodations, IEP goals, proficiency-band counts, or district routine names. Where input or config is thin, leave a bracketed placeholder the teacher fills in before teaching, and flag it in the prep reality check.
 
 **Process:**
 
@@ -101,4 +102,80 @@ You are an instructional coach fluent in Universal Design for Learning (UDL 2.2:
 
 ## Example Output
 
-> [This section will be populated by the eval system with a reference example. For now, run the skill with sample input to see output quality.]
+> **Differentiation Plan — 7th-Grade Science — Modeling Energy Transfer in a Food Web**
+>
+> **District:** Riverbend Unified School District (from config) | **School:** Franklin Middle School
+> **Teacher:** Ms. Tran (from config) | **Grade/subject:** Grade 7 Science (from config)
+> **MTSS framework (from config):** core / strategic / intensive | **UDL:** district-adopted UDL 2.2
+> **Lesson format:** 5E — this plan targets the Explore + Explain segments (50-min period) | **Time budget for differentiation prep:** 30 min (from user input)
+>
+> *DRAFT — differentiation plan, adapt to your students' actual needs*
+>
+> ---
+>
+> ### (a) Objective analysis
+>
+> **Objective:** SWBAT construct a model showing how energy moves through a food web and explain what happens to the available energy at each level.
+>
+> - **Essential understanding (non-negotiable, all students):** energy decreases as it moves up trophic levels; arrows in a food-web model point in the direction energy flows.
+> - **Core skill, flexible demonstration:** constructing and explaining a model — can be drawn, built with cards, narrated orally, or written.
+> - **Prerequisite to scaffold:** "producer / consumer / decomposer" vocabulary; reading an arrow as "is eaten by → energy flows to."
+> - **Extension (productive struggle, not more-of-the-same):** model what happens to the food web when one population collapses; quantify the ~10% energy transfer.
+>
+> ### (b) UDL moves (UDL 2.2)
+>
+> - **Engagement (why):** open with a 30-second clip of a real local food web (wolves/elk — relevance); offer choice of organism set (forest, ocean, or schoolyard) for the model.
+> - **Representation (what):** present the food web three ways — labeled diagram, short narrated animation (closed-captioned), and physical organism cards. Pre-teach 4 vocabulary terms with picture support.
+> - **Action & Expression (how):** students may show the model as a drawing, a card arrangement photographed, an oral explanation recorded on a Chromebook, or a written paragraph. Speech-to-text available.
+>
+> ### (c) Tomlinson levers
+>
+> | Lever | What changes | For whom |
+> |---|---|---|
+> | **Content** | Organism-card set vs. full text; diagram with arrows pre-drawn vs. blank | Striving readers; EL Entering/Emerging |
+> | **Process** | Build-with-cards (hands-on) vs. draw vs. write; partner vs. independent | By readiness + IEP |
+> | **Product** | Drawn / built-and-photographed / recorded / written model + explanation | Student choice (all) |
+> | **Environment** | Back table for small-group build; quiet corner option | EL group; 504 attentional |
+> | **Affect** | "Scientists revise models — version 1 is supposed to change"; silent thumbs check | All; anxiety profile |
+>
+> ### (d) MTSS-tiered plan, keyed to lesson segments
+>
+> | Tier | Who | What | When (segment) | How measured |
+> |---|---|---|---|---|
+> | **Core (all)** | Whole class | 5E Explore: build a food-web model from the chosen organism set, in pairs | Explore, 15 min | Circulate; every pair has ≥4 organisms with correctly directed arrows |
+> | **Strategic (some)** | ~6 students (striving readers + EL Developing) | Small-group pull at the back table during Explore — organism cards with picture+word labels; teacher models one arrow, students complete the rest; sentence frame for the explanation | Explore, 15 min (concurrent) | Group produces a 3-organism chain with correct arrows + one frame-supported sentence |
+> | **Intensive (few)** | 2 students whose IEPs specify a modeling/graphic-organizer pathway (case managers in the special-ed directory, per config) | Same objective via a pre-structured 3-tier organizer (producer → consumer → top consumer) with a word bank; oral explanation accepted in place of written | Explore + Explain | Student places 3 organisms correctly and explains energy direction orally — meets the same objective |
+>
+> ### (e) Profile-specific moves
+>
+> - **Striving readers (below grade band, per config Lexile band):** organism cards instead of the text passage; arrows pre-drawn on one model so the cognitive load is "label the energy direction," not "decode the reading."
+> - **EL — Entering/Emerging (per config WIDA bands; EL coordinator Ms. Park, ext. 211, co-planned the visuals):** labeled picture cards; same-language partner from the Spanish home-language inventory (per config); cognate bridge — *energy / energía, consumer / consumidor*; content mastery (correct arrows) counts even if the English explanation is one frame-supported sentence.
+> - **EL — Developing/Expanding:** sentence frames — "Energy flows from ___ to ___ because ___"; word bank; structured oral rehearsal with a partner before writing.
+> - **IEP common accommodations (translated from accommodations on file, not invented — per no-fabrication rule):** extended time into the Explain block; graphic organizer; speech-to-text for the recorded explanation; check-in at the Explore→Explain transition.
+> - **504 attentional support (1 student):** chunked two-step directions posted; quiet-corner option during the build; visual countdown timer.
+> - **Advanced / showing readiness:** the population-collapse extension and the ~10% quantification — open-ended, keeps them in productive struggle, not "finish early and read."
+> - **Anxiety / processing speed:** advance notice if they'll be asked to share; written or recorded response accepted in place of presenting to the class; silent thumbs for the check.
+>
+> ### (f) Formative assessment & responsive grouping
+>
+> - **1-minute check:** exit photo/upload of each model to the assessment platform (per config — district Google Forms with image upload), plus one sentence: "What happens to the energy as it goes up?"
+> - **Grouping logic:** heterogeneous pairs for the Explore build (peer language models); pull a **homogeneous** strategic group tomorrow for any student whose exit model had reversed arrows (a specific, diagnosable error).
+>
+> ### (g) Prep reality check (against the 30-min budget)
+>
+> - **Free moves (language/grouping only):** sentence frames, cognate bridges, partner assignments, choice of product, thumbs check — **0 min** beyond planning.
+> - **Costly moves (new materials):** organism-card sets with picture labels (~15 min to print/cut for 3 sets), pre-drawn-arrow model copies (~5 min), 3-tier organizer with word bank (~5 min). **Total ~25 min — within the 30-min budget.**
+> - **Cut if over budget:** the picture-labeled card set is the highest-leverage item (serves striving readers + EL + IEP simultaneously) — keep it; if time-pressed, drop the separate 3-tier organizer and route those 2 students to the strategic back-table group instead.
+> - **Do tomorrow vs. weekend:** everything here is tomorrow-ready; only the laminated reusable card set would be a weekend upgrade.
+>
+> ### Integration & disclosure
+>
+> - **Hand-offs:** run the food-web background passage through `text-level-adjuster` at the striving-reader Lexile and the EL bands (per config); back-derive the model's success criteria from `rubric-generator`; the upstream lesson came from `lesson-plan-builder`.
+> - **Accommodation fidelity:** every IEP/504 move above is an implementation of an accommodation on file, not a relaxation of rigor — same objective for every tier. Anything beyond the accommodations on file is flagged below as an IEP-team decision, not made here.
+> - **AI-use disclosure (per district AUP, from config):** *"AI-drafted; teacher-reviewed; teacher-owned."*
+> - **Save:** `outputs/differentiation/energy-transfer-food-web-2026-06-08.md`
+>
+> ### Input-thinness flags (per the no-fabrication rule)
+>
+> - Profile counts ("~6 striving/EL," "2 IEP modeling-pathway," "1 504") were taken from the user's profile summary; the specific accommodation language was abstracted, not pulled from individual IEPs — confirm against the case-manager directory (per config) before teaching.
+> - No formative-assessment plan was supplied, so one was proposed (exit model + sentence); swap in your own if you have one.
